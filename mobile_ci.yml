@@ -12,15 +12,15 @@ jobs:
 
     steps:
     - name: Checkout Code
-      uses: actions/checkout@v4
+      uses: actions/checkout@v3
 
     - name: Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v3
       with:
         python-version: '3.15'
 
     - name: Install Node.js (for Appium)
-      uses: actions/setup-node@v4
+      uses: actions/setup-node@v3
       with:
         node-version: '18'
 
@@ -51,7 +51,7 @@ jobs:
         path: reports/report.html
 
         - name: Send Slack Notification
-      uses: 8398a7/action-slack@v4
+      uses: 8398a7/action-slack@v3
       with:
         status: ${{ job.status }}
         text: "Mobile Automation Test Run Completed!"
