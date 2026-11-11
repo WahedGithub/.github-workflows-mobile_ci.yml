@@ -46,7 +46,7 @@ def test_create_contact(driver):
         print("Permission dialog did not appear, continuing...")
 
     # 2. Add wait of 5 seconds
-    time.sleep(5)
+    time.sleep(4)
 
     # 3. Click on "Create contact" button
     create_contact_btn = wait.until(
