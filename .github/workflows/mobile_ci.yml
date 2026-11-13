@@ -38,6 +38,7 @@ jobs:
       uses: reactivecircus/android-emulator-runner@v2
       with:
         api-level: 30
+        force-avd-creation: true
         script: echo "Emulator started"
 
     - name: Start Appium Server (Background)
