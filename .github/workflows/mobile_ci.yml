@@ -17,7 +17,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: '3.10'
+        python-version: '3.15'
 
     - name: Install Node.js (for Appium)
       uses: actions/setup-node@v4
@@ -26,8 +26,8 @@ jobs:
 
     - name: Install Appium & Android Driver
       run: |
-        npm install -g appium
-        appium driver install uiautomator2
+        npm install -g appium@4.0.0-beta.6
+        appium driver install uiautomator2@9.0.2
 
     - name: Install Dependencies
       run: |
@@ -53,5 +53,5 @@ jobs:
     - name: Send Slack Notification
       uses: slackapi/slack-github-action@v1.26.0
       with:
-        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK-URL }}
       if: always()
