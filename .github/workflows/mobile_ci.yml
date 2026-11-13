@@ -34,6 +34,11 @@ jobs:
         python -m pip install --upgrade pip
         pip install Appium-Python-Client pytest pytest-html pytest-rerunfailures
 
+    - name: Run Android Emulator
+      uses: reactive circus android-emulator-runner@v2
+      with:
+        api-level:30
+
     - name: Start Appium Server (Background)
       run: |
         appium &
