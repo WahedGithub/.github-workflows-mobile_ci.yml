@@ -48,6 +48,11 @@ jobs:
         appium &
         sleep 5
 
+    - name: Restart ADB Server
+      run : |
+        adb kill-server
+        adb start-server
+
     - name: Run Pytest with Auto-Retries
       run: |
         pytest --reruns 2 --html=reports/report.html --self-contained-html
