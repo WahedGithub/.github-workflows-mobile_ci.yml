@@ -38,6 +38,8 @@ jobs:
       uses: reactivecircus/android-emulator-runner@v2
       with:
         api-level: 30
+        target: google_apis
+        arch: x86_64
         force-avd-creation: true
         script: echo "Emulator started"
 
