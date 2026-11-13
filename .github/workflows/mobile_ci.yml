@@ -35,7 +35,7 @@ jobs:
         pip install Appium-Python-Client pytest pytest-html pytest-rerunfailures
 
     - name: Run Android Emulator
-      uses: reactive circus android-emulator-runner@v2
+      uses: reactivecircus/android-emulator-runner@v2
       with:
         api-level: 30
 
