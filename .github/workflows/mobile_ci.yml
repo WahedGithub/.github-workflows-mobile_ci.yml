@@ -37,7 +37,7 @@ jobs:
     - name: Run Android Emulator
       uses: reactive circus android-emulator-runner@v2
       with:
-        api-level:30
+        api-level: 30
 
     - name: Start Appium Server (Background)
       run: |
